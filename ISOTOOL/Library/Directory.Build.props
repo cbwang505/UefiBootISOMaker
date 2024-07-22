@@ -1,0 +1,38 @@
+<Project>
+  <!-- Package related stuff -->
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net40;net45;net5.0</TargetFrameworks>
+    <PackageProjectUrl>https://github.com/DiscUtils/DiscUtils</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- Ignore warning CS1591 'Missing XML comment for publicly visible type or member' -->
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <!-- Versioning -->
+  <ItemGroup>
+    </ItemGroup>
+
+  <!-- SourceLink support -->
+  <PropertyGroup>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <DebugType>portable</DebugType>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    </ItemGroup>
+
+  <!-- Assembly Signing -->
+ <PropertyGroup>
+    <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)../SigningKey.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+</Project>
